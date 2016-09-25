@@ -20,6 +20,7 @@ int main()
 		{
 			cout << "how many digits the number of guessed (bulls) and how many numbers guessed, and is in the right place (cow).\n";
 		}
+		// Exit
 		cout << "start: 1\nexet: 0\nhelp: 2\n";
 		cin >> start;
 	} while (start != 0);
@@ -43,6 +44,7 @@ void guess(int secret)
 		cin >> check;
 		for (int i = 1, cow = 0, bulls = 0; i <= 4; i++)
 		{
+			// Очень запутанные условия. Сделайте рефакторинг - вынесите часть кода в функции
 			if (check / 1000 == secret / 1000 &&
 				i == 1 ||
 				check / 100 % 10 == secret / 100 % 10 &&
